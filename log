@@ -98,3 +98,20 @@ Wed 27 Mar 2024 06:07:26 PM UTC:
  tests:  10|2
 total_score: 45/70
 f5fa8b3
+Wed 27 Mar 2024 06:16:23 PM UTC: 
+ list.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:98:31: error: ‘null’ undeclared (first use in this function)
+   98 |       if(list->current->next!=null){
+      |                               ^~~~
+list.c:98:31: note: each undeclared identifier is reported only once for each function it appears in
+list.c:104:32: error: expected ‘;’ before ‘}’ token
+  104 |       list->current = nuevoNODO
+      |                                ^
+      |                                ;
+  105 |     }
+      |     ~                           
+Compilation failed
+710ade4
