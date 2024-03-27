@@ -21,3 +21,24 @@ list.c:52:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 946fe62
+Wed 27 Mar 2024 06:00:25 PM UTC: 
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:36:6: error: expected ‘;’ before ‘return’
+   36 |      return lista;
+      |      ^~~~~~
+list.c: In function ‘nextList’:
+list.c:48:68: error: lvalue required as left operand of assignment
+   48 |     if(list==  NULL || list->current==NULL || list -> current->next=NULL){
+      |                                                                    ^
+list.c: In function ‘createList’:
+list.c:37:1: error: control reaches end of non-void function [-Werror=return-type]
+   37 | }
+      | ^
+list.c: In function ‘nextList’:
+list.c:52:1: error: control reaches end of non-void function [-Werror=return-type]
+   52 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e69549d
