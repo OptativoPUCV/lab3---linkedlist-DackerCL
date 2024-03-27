@@ -126,3 +126,32 @@ list.c:98:31: error: ‘null’ undeclared (first use in this function)
 list.c:98:31: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 47a59fe
+Wed 27 Mar 2024 06:16:57 PM UTC: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:98:31: error: ‘null’ undeclared (first use in this function)
+   98 |       if(list->current->next!=null){
+      |                               ^~~~
+list.c:98:31: note: each undeclared identifier is reported only once for each function it appears in
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:121:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  121 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+list.c:112:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+  112 | void * popBack(List * list) {
+      |        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4389b61
