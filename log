@@ -166,3 +166,9 @@ list.c:98:31: error: ‘null’ undeclared (first use in this function)
 list.c:98:31: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a65c488
+Wed 27 Mar 2024 06:18:13 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|1
+total_score: 55/70
+2dc4036
