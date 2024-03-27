@@ -155,3 +155,14 @@ list.c:112:8: error: ‘popBack’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 4389b61
+Wed 27 Mar 2024 06:17:56 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:98:31: error: ‘null’ undeclared (first use in this function)
+   98 |       if(list->current->next!=null){
+      |                               ^~~~
+list.c:98:31: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a65c488
