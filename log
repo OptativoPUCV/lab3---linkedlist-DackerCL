@@ -61,3 +61,13 @@ list.c:37:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 a7e2a3b
+Wed 27 Mar 2024 06:01:43 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:48:68: error: lvalue required as left operand of assignment
+   48 |     if(list==  NULL || list->current==NULL || list -> current->next=NULL){
+      |                                                                    ^
+Compilation failed
+247f869
