@@ -172,3 +172,66 @@ Wed 27 Mar 2024 06:18:13 PM UTC:
  tests:  11|1
 total_score: 55/70
 2dc4036
+Wed 27 Mar 2024 06:24:52 PM UTC: 
+ list.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:121:23: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  121 |     void * data =list-current->data;
+      |                       ^~~~~~~
+      |                       popCurrent
+list.c:121:23: note: each undeclared identifier is reported only once for each function it appears in
+list.c:122:5: error: unknown type name ‘node’; did you mean ‘Node’?
+  122 |     node *nodeToRemove = list->current;
+      |     ^~~~
+      |     Node
+list.c:122:26: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+  122 |     node *nodeToRemove = list->current;
+      |                          ^~~~
+list.c:125:10: error: expected expression before ‘}’ token
+  125 |     }else}
+      |          ^
+list.c:122:11: error: unused variable ‘nodeToRemove’ [-Werror=unused-variable]
+  122 |     node *nodeToRemove = list->current;
+      |           ^~~~~~~~~~~~
+list.c:121:12: error: unused variable ‘data’ [-Werror=unused-variable]
+  121 |     void * data =list-current->data;
+      |            ^~~~
+list.c: At top level:
+list.c:126:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+  126 |         list->head=list->current->next;
+      |             ^~
+list.c:127:5: error: expected identifier or ‘(’ before ‘}’ token
+  127 |     }
+      |     ^
+list.c:128:5: error: expected identifier or ‘(’ before ‘if’
+  128 |     if(list->current->next!=NULL){
+      |     ^~
+list.c:130:6: error: expected identifier or ‘(’ before ‘else’
+  130 |     }else{
+      |      ^~~~
+list.c:133:9: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+  133 |     list->current=list->current->next;
+      |         ^~
+list.c:134:5: error: data definition has no type or storage class [-Werror]
+  134 |     free(nodeToRemove);
+      |     ^~~~
+list.c:134:5: error: type defaults to ‘int’ in declaration of ‘free’ [-Werror=implicit-int]
+list.c:134:5: error: parameter names (without types) in function declaration [-Werror]
+list.c:134:5: error: conflicting types for ‘free’; have ‘int()’
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:555:13: note: previous declaration of ‘free’ with type ‘void(void *)’
+  555 | extern void free (void *__ptr) __THROW;
+      |             ^~~~
+In file included from test.c:5:
+list.c:135:1: error: expected identifier or ‘(’ before ‘}’ token
+  135 | }
+      | ^
+list.c: In function ‘popCurrent’:
+list.c:125:10: error: control reaches end of non-void function [-Werror=return-type]
+  125 |     }else}
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+eccf611
