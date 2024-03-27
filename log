@@ -71,3 +71,9 @@ list.c:48:68: error: lvalue required as left operand of assignment
       |                                                                    ^
 Compilation failed
 247f869
+Wed 27 Mar 2024 06:02:04 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 25/70
+fd8332e
